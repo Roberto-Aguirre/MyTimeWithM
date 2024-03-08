@@ -2,7 +2,7 @@
   "name": "dependencias",
   "version": "1.0.0",
   "description": "Moments with M",
-  "main": "prueba.js",
+  "main": "dom.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
