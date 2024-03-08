@@ -5,8 +5,6 @@ const fechas = {
     end: Date.now()
 }
 
-
-
 function obtenerFechas(){
     let diferencia = intervalToDuration(fechas)
     return diferencia
@@ -20,5 +18,4 @@ let newFecha = {
     dias: fechasDiferencias.days
 }
 
-console.log(newFecha.año);
 export {newFecha}
