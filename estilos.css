@@ -5,21 +5,29 @@ html,body{
 }
 
 body{
- display: flex;
- justify-content: center;
- align-items: center;
+    background-color:rgba(31, 224, 31, 0.808);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container{
-    display: block;
+    display: flex;
+    align-items: center;
+    height: 80%;
 }
 
 .contador{
+    width: 100%;
     display: flex;
 }
 
 .fecha{
-    margin: 10vw
+    width: max-content;
+    height: 30%;
+    margin: 5vw;
+    font-size: 200%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .años{
