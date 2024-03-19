@@ -10,9 +10,11 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "date-fns": "latest"
+    "date-fns": "latest",
+    "jquery": "^3.7.1"
   },
   "devDependencies": {
-    "date-fns": "latest"
+    "date-fns": "latest",
+    "jquery": "^3.7.1"
   }
 }
