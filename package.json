@@ -1,0 +1,20 @@
+{
+  "name": "dependencias",
+  "version": "1.0.0",
+  "description": "Moments with M",
+  "main": "dom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "date-fns": "latest",
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "date-fns": "latest",
+    "jquery": "^3.7.1"
+  }
+}
