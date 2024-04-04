@@ -12,6 +12,9 @@ body{
     background-size: 80vw;
 }
 
+div{
+    box-shadow: 100vw;
+}
 /* #example1 {
     background-image: url(img_flwr.gif), url(paper.gif);
     background-position: right bottom, left top;
@@ -19,7 +22,18 @@ body{
   } */
 
 
+.petalo>img{
+    position: absolute;
+    width: 15%;
+    animation-duration: 1000ms;
+}
 
+/*! Seguir aqui */
+
+.petalo>img:hover{
+    animation: infinite;
+    transform: translateX(calc())
+}
 
 .imagenes{
     position: absolute;
