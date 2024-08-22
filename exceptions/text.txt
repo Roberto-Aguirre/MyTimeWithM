@@ -1,0 +1,1 @@
+Cuando llega al fin de mes sale como dias 0 (El mismo día de cumplir años o més)
