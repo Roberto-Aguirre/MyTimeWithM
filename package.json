@@ -11,10 +11,9 @@
   "type": "module",
   "dependencies": {
     "date-fns": "latest",
-    "jquery": "^3.7.1"
+    "express": "^4.21.2"
   },
   "devDependencies": {
-    "date-fns": "latest",
-    "jquery": "^3.7.1"
+    "date-fns": "latest"
   }
 }
