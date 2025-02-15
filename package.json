@@ -4,16 +4,17 @@
   "description": "Moments with M",
   "main": "dom.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo test"
   },
   "author": "",
   "license": "ISC",
   "type": "module",
   "dependencies": {
     "date-fns": "latest",
-    "express": "^4.21.2"
+    "express": "4.21.2"
   },
   "devDependencies": {
-    "date-fns": "latest"
+    "date-fns": "latest",
+    "nodemon": "^3.1.9"
   }
 }

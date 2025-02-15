@@ -1,0 +1,39 @@
+/* Body and container styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
+  
+  .container {
+    position: relative;
+    width: 80%;
+    height: 100px;
+    background-color: #e0e0e0;
+    overflow: hidden;
+  }
+  
+  /* Animated box styling */
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db;
+    position: absolute;
+    left: -100px; /* Start off the left side */
+    animation: moveRight 5s linear infinite;
+  }
+  
+  /* Animation keyframes */
+  @keyframes moveRight {
+    0% {
+      left: -100px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  
