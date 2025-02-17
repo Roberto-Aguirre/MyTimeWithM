@@ -1,12 +1,17 @@
-const datesBeetween = require('date-fns');
+const {intervalToDuration,getDaysInMonth, getMonth} = require('date-fns');
 
-const fechas = {
+const comparingDates = {
     start: new Date(2022, 8, 20, 0, 0, 0),
     end: Date.now()
 }
 
 function obtenerFechas(){
-    return datesBeetween.intervalToDuration(fechas)
+    let date = intervalToDuration(comparingDates)
+    let remain = getDaysInMonth(getMonth(comparingDates.end)+1)-date.days;
+    return {
+        date,
+        remain
+    }
 }
 
 
