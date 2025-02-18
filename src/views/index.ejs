@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Time With M</title>
+    <link rel="stylesheet" href="/css/estilos.css" type="text/css">
+</head>
+<body>
+    <div class="center">
+    <div class="container">
+        <div class="box fecha"><h3><%= years %> Años</h3></div>
+        <!-- Validacion si poner dias/día -->
+        <% if(days>1){ %>
+            <div class="box fecha"><h3><%= months %> Meses</h3></div>
+         <% } else { %>
+            <div class="box fecha"><h3><%= months %> Mes</h3></div>
+          <% } %>
+        <% if(days>1){ %>
+            <div class="box fecha"><h3><%= days %> Dias</h3></div> 
+         <% } else { %>
+            <div class="box fecha"><h3><%= days %> Día</h3></div>
+          <% } %>
+        
+    </div>
+    <% if(days>1){ %>
+        <div class="box fecha"><h3>Faltan <%= remain %> días para cumplir un mes</h3>
+     <% } else { %>
+        <div class="box fecha"><h3>Falta <%= remain %> día para cumplir un mes</h3>
+      <% } %>
+    </div>
+    <footer>
+        <div class="container">
+        <div class="flowers"></div>
+        <div class="flowers"></div>
+        <div class="flowers"></div>
+    </div>
+    </footer>
+</div>
+</body>
+</html>
