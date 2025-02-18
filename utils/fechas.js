@@ -1,13 +1,13 @@
-const {intervalToDuration,getDaysInMonth, getMonth} = require('date-fns');
+const { intervalToDuration, getDaysInMonth, getMonth } = require('date-fns');
 
 const comparingDates = {
     start: new Date(2022, 8, 20, 0, 0, 0),
     end: Date.now()
 }
 
-function obtenerFechas(){
+function obtenerFechas() {
     let date = intervalToDuration(comparingDates)
-    let remain = getDaysInMonth(getMonth(comparingDates.end)+1)-date.days;
+    let remain = getDaysInMonth(getMonth(comparingDates.end) + 1) - date.days;
     return {
         date,
         remain
@@ -15,4 +15,4 @@ function obtenerFechas(){
 }
 
 
-module.exports = {obtenerFechas}
+module.exports = { obtenerFechas }

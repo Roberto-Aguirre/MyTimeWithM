@@ -3,7 +3,6 @@ const app = express();
 const path = require('path');
 const { obtenerFechas } = require('./utils/fechas')
 
-
 const { date:{days, months, years}, remain } = obtenerFechas()
 
 app.set('view engine', 'ejs');
