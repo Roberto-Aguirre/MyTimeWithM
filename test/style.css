@@ -1,0 +1,21 @@
+.flower {
+    position: relative;
+    height: 5vw;
+    animation: transitionFlower 10000ms infinite;
+    margin-bottom: 50px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes transitionFlower {
+    0% {
+        transform: translate(-10vw,0vw)
+    }
+    100% {
+        transform: translate(110vw, 0vw);
+
+    }
+}

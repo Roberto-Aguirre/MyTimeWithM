@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Sine Wave Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+        <div class="box" id="box"></div>
+    </div>
+    <script>
+        let boxes = document.getElementsByClassName("box");
+        const types = [100, 200, 300, 400, 500]
+        let startTime = null;
+        let amplitude = 70;
+        let frequency = 0.005;
+        let speed = 3;
+        let screenWidth = window.innerWidth;
+
+        function move(timestamp) {
+            if (!startTime) startTime = timestamp;
+            let elapsedTime = timestamp - startTime;
+            let x = (elapsedTime * speed * 0.15) % screenWidth;
+            let y = Math.sin(elapsedTime * frequency) * amplitude;
+
+            for (const box of boxes) {
+                box.style.transform = `translate(${x}px, ${y}px)`;
+            }
+
+            requestAnimationFrame(move);
+        }
+
+        requestAnimationFrame(move)
+
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div> <img src="../src/static/flower.png" class="flower">
+    </div>
+    <div> <img src="../src/static/flower.png" class="flower">
+    </div>
+    <div> <img src="../src/static/flower.png" class="flower">
+    </div>
+    <div> <img src="../src/static/flower.png" class="flower">
+    </div>
+</body>
+
+</html> -->
