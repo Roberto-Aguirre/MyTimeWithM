@@ -8,6 +8,8 @@
     <style>
         body {
             display: flex;
+            margin: 0;
+            padding: 0;
             justify-content: flex-start;
             align-items: center;
             height: 100vh;
@@ -23,44 +25,63 @@
         .box {
             width: 50px;
             height: 50px;
-            background-color: red;
             position: absolute;
             transform: translateY(-50%);
         }
+
+        .box > img {
+            width: 5vw;
+            height: 5vw;
+        }
+
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="box" id="box"></div>
-        <div class="box" id="box"></div>
-        <div class="box" id="box"></div>
-        <div class="box" id="box"></div>
-        <div class="box" id="box"></div>
+        <div class="box" id="box"><img src="../src/static/flower.png" alt=""></div>
+        <div class="box" id="box"><img src="../src/static/flower.png" alt=""></div>
+        <div class="box" id="box"><img src="../src/static/flower.png" alt=""></div>
+        <div class="box" id="box"><img src="../src/static/flower.png" alt=""></div>
+        <div class="box" id="box"><img src="../src/static/flower.png" alt=""></div>
+        <div class="box" id="box"><img src="../src/static/flower.png" alt=""></div>
+        <div class="box" id="box"><img src="../src/static/flower.png" alt=""></div>
+        <div class="box" id="box"><img src="../src/static/flower.png" alt=""></div>
+        <div class="box" id="box"><img src="../src/static/flower.png" alt=""></div>
+        <div class="box" id="box"><img src="../src/static/flower.png" alt=""></div>
     </div>
     <script>
         let boxes = document.getElementsByClassName("box");
-        const types = [100, 200, 300, 400, 500]
+        const types = [100, 200, 300, 400, 500];
         let startTime = null;
         let amplitude = 70;
         let frequency = 0.005;
         let speed = 3;
         let screenWidth = window.innerWidth;
 
+
+        window.onresize = (event) => {
+            screenWidth = window.innerWidth
+            speed = Math.round((screenWidth / (screenWidth + 1000)) * 9)
+        }
+
+
         function move(timestamp) {
             if (!startTime) startTime = timestamp;
-            let elapsedTime = timestamp - startTime;
-            let x = (elapsedTime * speed * 0.15) % screenWidth;
-            let y = Math.sin(elapsedTime * frequency) * amplitude;
+            let elapsedTime = (timestamp - startTime);
 
-            for (const box of boxes) {
-                box.style.transform = `translate(${x}px, ${y}px)`;
+            for (let i = 0; i < boxes.length; i++) {
+                let phaseShift = types[i] || 0; // Each box gets a different phase offset
+                let x = ((elapsedTime + phaseShift) * speed * 0.15) % screenWidth;
+                let y = Math.sin((elapsedTime * 0.20 + phaseShift * 10) * frequency * 1) * amplitude * 5;
+
+                boxes[i].style.transform = `translate(${x}px, ${y}px)`;
             }
 
             requestAnimationFrame(move);
         }
 
-        requestAnimationFrame(move)
+        requestAnimationFrame(move);
 
     </script>
 
