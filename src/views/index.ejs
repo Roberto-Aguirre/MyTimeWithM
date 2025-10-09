@@ -11,11 +11,16 @@
     <div class="container">
         <div class="box fecha"><h3><%= years %> Años</h3></div>
         <!-- Validacion si poner dias/día -->
-        <% if(days>1){ %>
+         <% if(months!=undefined){ %>
+          <div class="box fecha"><h3></h3></div>
+          <% if (months>1) { %>
             <div class="box fecha"><h3><%= months %> Meses</h3></div>
          <% } else { %>
             <div class="box fecha"><h3><%= months %> Mes</h3></div>
           <% } %>
+          <% } %>
+        
+
         <% if(days>1){ %>
             <div class="box fecha"><h3><%= days %> Dias</h3></div> 
          <% } else { %>
