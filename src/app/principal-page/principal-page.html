@@ -1,23 +1,23 @@
 <section class="bg-white lg:grid lg:h-screen lg:place-content-center">
   <div class="mx-auto w-screen max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8 lg:py-32">
     <div class="mx-auto max-w-prose text-center frase-container">
-      <h1 class="text-2xl font-bold text-gray-900 sm:text-5xl">
+      <h1 class="text-4xl sm:text-4xl lg:text-5xl font-bold leading-none px-3 text-gray-900 ">
         {{getFrase()}}
       </h1>
       <div class="mt-4 flex justify-center gap-4 sm:mt-6 date-container">
         <div class="box fecha">
-          <p class="text-2xl sm:text-4xl px-3 ">{{ duration.years }} años</p>
+          <p class="text-4xl sm:text-4xl lg:text-5xl font-semibold leading-none px-3">{{ duration.years }} años</p>
         </div>
         @if(duration.months !== undefined){
         <div class="box fecha">
-          <p class="text-2xl sm:text-4xl px-3  ">
+          <p class="text-4xl sm:text-4xl lg:text-5xl font-semibold leading-none px-3">
             {{ duration.months }}
             {{ duration.months === 1 ? 'mes' : 'meses' }}
           </p>
         </div>
         }
         <div class="fecha">
-          <p class="text-2xl sm:text-4xl px-3 ">
+          <p class="text-4xl sm:text-4xl lg:text-5xl font-semibold leading-none px-3">
             {{ duration.days }}
             {{ duration.days === 1 ? 'día' : 'días' }}
           </p>
