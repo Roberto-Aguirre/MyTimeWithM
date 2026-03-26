@@ -10,11 +10,25 @@ import { toZonedTime } from 'date-fns-tz';
   templateUrl: './principal-page.html',
   styleUrls: ['./principal-page.css']
 })
-export class PrincipalPageComponent implements OnInit {
+export class PrincipalPage implements OnInit {
   
   public duration!: Duration;
   public remain: number = 0;
-  private readonly timeZone = 'America/Mexico_City'; // UTC-06:00 (ajusta según horario de verano si es necesario)
+  private readonly timeZone = 'America/Mexico_City';
+  private frases = [
+    "Cada día es una nueva oportunidad para amarte más.",
+    "Eres mi sol en los días nublados.",
+    "Contigo, cada momento es especial.",
+    "Eres mi razón para sonreír cada día.",
+    "Nuestro amor es mi mayor tesoro.",
+    "Eres mi inspiración y mi fuerza.",
+    "Cada día a tu lado es un regalo.",
+    "Eres mi compañero de vida perfecto.",
+    "Nuestro amor crece con cada día que pasa.",
+    "Eres mi todo, mi amor eterno.",
+    "Contigo, el tiempo se detiene y solo existimos tú y yo."
+  ];
+  public random = Math.floor(Math.random() * this.frases.length);
 
   ngOnInit(): void {
     this.calcularFechas();
@@ -34,4 +48,9 @@ export class PrincipalPageComponent implements OnInit {
     const daysInCurrentMonth = getDaysInMonth(endDate);
     this.remain = daysInCurrentMonth - (this.duration.days || 0);
   }
+
+  getFrase(): string {
+    return this.frases[this.random];
+  }
+
 }
