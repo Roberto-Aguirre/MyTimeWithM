@@ -16,17 +16,17 @@ export class PrincipalPage implements OnInit {
   public remain: number = 0;
   private readonly timeZone = 'America/Mexico_City';
   private frases = [
-    "Cada día es una nueva oportunidad para amarte más.",
-    "Eres mi sol en los días nublados.",
-    "Contigo, cada momento es especial.",
-    "Eres mi razón para sonreír cada día.",
-    "Nuestro amor es mi mayor tesoro.",
-    "Eres mi inspiración y mi fuerza.",
-    "Cada día a tu lado es un regalo.",
-    "Eres mi compañero de vida perfecto.",
-    "Nuestro amor crece con cada día que pasa.",
-    "Eres mi todo, mi amor eterno.",
-    "Contigo, el tiempo se detiene y solo existimos tú y yo."
+    "Cada día aprovecho para amarte más.",
+    "Siempre te extraño y quiero estar en tu corazon.",
+    "Jamás uno sin el otro.",
+    "Sé que podemos con todo lo que se nos atraviese.",
+    "Amo pensarte en cada momento de mi día.",
+    "Eres mi novia, mi esposa y mi amante.",
+    "Todos los días me enamoro más de ti.",
+    "¿Quisieras ser mi esposa?",
+    "Vienen grandes cosas para nosotros, te amo.",
+    "Eres la persona con la que amo estar, quiero besar tus cachetitos.",
+    "Mi chiquita preciosa, hermosa, te amo como no tienes una idea."
   ];
   public random = Math.floor(Math.random() * this.frases.length);
 
